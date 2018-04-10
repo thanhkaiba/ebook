@@ -68,3 +68,15 @@ D:\edu3.2\android\ebook-master\EBook\obj\Debug\EBook.csproj.GenerateResource.Cac
 D:\edu3.2\android\ebook-master\EBook\obj\Debug\EBook.csproj.CoreCompileInputs.cache
 D:\edu3.2\android\ebook-master\EBook\obj\Debug\EBook.exe
 D:\edu3.2\android\ebook-master\EBook\obj\Debug\EBook.pdb
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\bin\Debug\EBook.exe.config
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\bin\Debug\EBook.exe
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\bin\Debug\EBook.pdb
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.csprojResolveAssemblyReference.cache
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.FormRead.resources
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.FormStart.resources
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.Properties.Resources.resources
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.Resource.resources
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.csproj.GenerateResource.cache
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.csproj.CoreCompileInputs.cache
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.exe
+C:\Users\TienThanh\Desktop\ebook-master\ebook-master\EBook\obj\Debug\EBook.pdb

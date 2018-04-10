@@ -81,17 +81,37 @@ namespace EBook
            
             if (textChanged)
             {
+                if (textBoxSearch.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Không có từ khóa");
+                    return;
+                }
                 string[] key = textBoxSearch.Text.Trim().Split(' ');
-                string pattern = "[^.-:;!\\n?].*(";
+                
+                string pattern = "";
                 for (int i = 0; i < key.Length; i++)
                 {
+                    if (HasSpecialChars(key[i])) {
+                        MessageBox.Show("Từ khóa chứa ký tự đặc biệt!");
+                        return;
+                    } 
+                    //if (!CheckVietnamese.checkWord(key[i]))
+                    //{
+                    //    MessageBox.Show("Từ khóa sai chính tả");
+                    //    return;
+                    //}
                     pattern += "\\W?" + key[i] + "\\W.*";
                     if (i != key.Length - 1)
                         pattern += "|";
                 }
-                pattern += ")+.*[.:;!\\n?]";
-                regex = new Regex(pattern);
-                
+               
+                regex = new Regex(pattern, RegexOptions.Multiline);
+                matches = regex.Matches(Content.Text);
+                if (matches!= null && matches.Count > 0)
+                {
+                    Order();
+                }
+
             }
 
             if ((matches == null ||index == matches.Count) && temp <= Number_Chapter)
@@ -110,13 +130,17 @@ namespace EBook
                     {
                         matches = regex.Matches(ChapterContent);
                         Order();
-                        if (temp != number - 1)
-                        {
+                        
+                        
                             this.Content.Text = ChapterContent;
                             markText(ChapterContent);
                            
-                        }
+                        
                         temp++;
+                        if (temp == number - 1)
+                        {
+                            temp++;
+                        }
                         break;
                     }
                     temp++;
@@ -131,11 +155,20 @@ namespace EBook
                     this.Content.Select(matches[resultsIndex[index]].Index, matches[resultsIndex[index]].Length);
                     this.Content.Focus();
                     this.buttonSearch.Image = global::EBook.Properties.Resources.kripto_search_next2;
+                    if (index == matches.Count - 1 && temp == Number_Chapter + 1)
+                    {
+                        this.buttonSearch.Image = global::EBook.Properties.Resources.kripto_search_b;
+
+                    }
                     index++; 
+                } else if (temp == Number_Chapter + 1)
+                {
+                    MessageBox.Show("Đã hiển thị tất cả kết quả");
                 }
             }
             else
             {
+                MessageBox.Show("Không tìm thấy kết quả nào phù hợp");
                 this.buttonSearch.Image = global::EBook.Properties.Resources.kripto_search_b;
             }
             textChanged = false;
@@ -219,5 +252,11 @@ namespace EBook
             Array.Sort(priority, resultsIndex);
             Array.Reverse(resultsIndex);  
         }
+        private bool HasSpecialChars(string yourString)
+        {
+            return yourString.Any(ch => !Char.IsLetterOrDigit(ch));
+        }
     }
+    
+
 }

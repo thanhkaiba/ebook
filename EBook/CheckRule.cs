@@ -35,6 +35,25 @@ namespace CheckRule
             return wrongWords.ToArray();
         }
 
+        public static bool checkWord(string word)
+        {
+            Rule rule = new Rule();
+           
+
+            while (rule.index < word.Length)
+            {
+                rule = rule.Check(word);
+            }
+            if (rule is Wrong)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public static string[] load(string path)
         {
             try

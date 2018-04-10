@@ -31,9 +31,7 @@ namespace EBook
             base.Dispose(disposing);
         }
 
-        
-
-
+       
         private void InitializeComponent()
         {
 
