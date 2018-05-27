@@ -61,11 +61,21 @@ namespace EBook.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap addbtn {
+            get {
+                object obj = ResourceManager.GetObject("addbtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 
         ///Hồi 1. TAI HỌA BẤT NGỜ
         ///
         ///Nước sông Tiền Đường mênh mông, ngày đêm vòng qua thôn Ngưu Gia ở Lâm An không ngừng chảy ra biển lớn. Một dãy vài mươi cây bách ven sông lá đỏ như lửa, đang lúc tháng tám. Đồng cỏ quanh thôn đang bắt đầu úa vàng, dưới ánh tà dương càng thêm mấy phần hoang liêu.
-        ///Dưới hai gốc tùng lớn có một đám thôn dân, đàn ông đàn bà và khoảng mười mấy đứa trẻ con đang tập trung lắng nghe một ông già gầy gò kể chuyện. Người kể chuyện khoảng năm mươi tuổi, mặc một chiếc trường bào màu xanh cũ đã bạ [rest of string was truncated]&quot;;.
+        ///Dưới hai gốc tùng lớn có một đám thôn dân, đàn ông đàn bà và khoảng mười mấy đứa trẻ con đang tập trung lắng nghe một ông già gầy gò kể chuyện. Người kể chuyện khoảng năm mươi tuổi, mặc một chiếc trường bào màu xanh cũ đ [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c1 {
             get {
@@ -83,7 +93,7 @@ namespace EBook.Properties {
         ///Bao Tích Nhược kêu lên:
         ///- Đây là cha ruột của ngươi, ngươi.., ngươi còn không tin sao?
         ///Rồi ngẩng đầu đập mạnh vào tường, chát một tiếng ngã lăn ra đất.
-        ///Hoàn Nhan Khang cả kinh, lùi lại tránh qua, thu thương nhìn mẹ, chỉ [rest of string was truncated]&quot;;.
+        ///Hoàn Nhan Khang cả kinh, lùi lại tránh qua, thu thương nhì [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c10 {
             get {
@@ -96,7 +106,7 @@ namespace EBook.Properties {
         ///Hồi 11. Trường Xuân nhận thua
         ///
         ///Sa Thông Thiên thấy sư đệ nguy hiểm vội tung người vọt qua gạt phát trảo của Mai Siêu Phong. hai người cổ tay chạm nhau đều cùng thấy cánh tay tê chồn. trong lòng hoảng sợ. Lúc ấy bên trái vù vù mấy tiếng. liên châu tiền tiêu của Bành Liên Hổ đã bay tới. Mai Siêu Phong tiện tay nhấc Hầu Thông Hải lên ném về phía ấy. ái cha một tiếng gào lớn. Hầu Thông Hải đã bị loạt tiền đánh vào người. Hoàng Dung giữa lúc hỗn loạn kêu lớn:
-        ///- Tam đầu giao, cung hỷ phát tài được bao nhiêu là t [rest of string was truncated]&quot;;.
+        ///- Tam đầu giao, cung hỷ phát tài được bao nhiêu  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c11 {
             get {
@@ -110,7 +120,7 @@ namespace EBook.Properties {
         ///
         ///Hoàng Dung đang định xé con gà ra, sau lưng chợt có người nói:
         ///- Xé làm ba. Phần cái phao câu để cho ta!
-        ///Hai người giật nảy mình, sau lưng có người lén tới như thế mà mình hoàn toàn không hay biết gì, vội vàng quay lại, chỉ thấy người nói là một người ăn mày trung niên. Người này hàm vuông mặt dài, dưới cằm có râu, tay thô chân to, quần áo trên người vá chằng vá đụp nhưng rất sạch sẽ, cầm một chiếc gậy trúc xanh bóng loáng như ngọc, lưng đeo một chiếc hồ lô lớn sơn đỏ, vẻ mặt rấ [rest of string was truncated]&quot;;.
+        ///Hai người giật nảy mình, sau lưng có người lén tới như thế mà mình hoàn toàn không hay biết gì, vội vàng quay lại, chỉ thấy người nói là một người ăn mày trung niên. Người này hàm vuông mặt dài, dưới cằm có râu, tay thô chân to, quần áo trên người vá chằng vá đụp nhưng rất sạch sẽ, cầm một chiếc gậy trúc xanh bóng loáng như ngọc, lưng đeo một chiếc hồ lô lớn sơn đỏ, vẻ m [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c12 {
             get {
@@ -122,7 +132,7 @@ namespace EBook.Properties {
         ///   Looks up a localized string similar to 
         ///Hồi 13. Phế nhân ngũ hồ
         ///
-        ///Hoàng Dung trở về khách điếm, tự cho rằng mình đã làm một điều tốt, trong lòng rất đắc ý ngủ ngon một đêm, sáng hôm sau kể lại với Quách Tĩnh. Quách Tĩnh vì việc này đã mất rất nhiều sức lực hôm ấy đánh nhau với Hoàn Nhan Khang sứt đầu mẻ trán cũng chỉ vì muốn y thành thân với Mục Niệm Từ, lúc ấy nghe nói hai người bọn họ tình ý hòa hợp cũng rất vui vẻ, càng vui vẻ hơn là từ nay trở đi Khưu Xử Cơ và Giang Nam lục quái không thể ép mình phải cưới Mục Niệm Từ nữa. Hai người trong khá [rest of string was truncated]&quot;;.
+        ///Hoàng Dung trở về khách điếm, tự cho rằng mình đã làm một điều tốt, trong lòng rất đắc ý ngủ ngon một đêm, sáng hôm sau kể lại với Quách Tĩnh. Quách Tĩnh vì việc này đã mất rất nhiều sức lực hôm ấy đánh nhau với Hoàn Nhan Khang sứt đầu mẻ trán cũng chỉ vì muốn y thành thân với Mục Niệm Từ, lúc ấy nghe nói hai người bọn họ tình ý hòa hợp cũng rất vui vẻ, càng vui vẻ hơn là từ nay trở đi Khưu Xử Cơ và Giang Nam lục quái không thể ép mình phải cưới Mục Niệm Từ nữa. Hai người trong  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c13 {
             get {
@@ -135,7 +145,7 @@ namespace EBook.Properties {
         ///Hồi 14. Đảo chủ Đào hoa
         ///
         ///Chỉ thấy năm người đàn ông một người đàn bà bước vào sảnh, chính là Giang Nam lục quái. Họ từ bắc xuống nam, sắp về tới cố hương, hôm ấy đi qua Thái Hồ, chợt có nhân vật giang hồ lên thuyền ân cần tiếp đãi. Lục quái xa quê đã lâu, không rõ tình hình võ lâm hiện tại, lúc ấy cũng không bộc lộ thân phận của mình, chỉ có Chu Thông dùng tiếng lóng giang hồ đối đáp với họ mấy câu. Người lên thuyền vốn là Trương đầu lĩnh thuộc hạ của Quy Vân trang.
-        ///Y vâng lệnh Lục Quán Anh ra hồ đón tiếp  [rest of string was truncated]&quot;;.
+        ///Y vâng lệnh Lục Quán Anh ra hồ đón t [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c14 {
             get {
@@ -149,7 +159,7 @@ namespace EBook.Properties {
         ///
         ///Lục Quán Anh đỡ Hoàn Nhan Khang dậy, thấy y đã bị điểm trúng huyệt đạo không thể động đậy, chỉ có hai tròng mắt là còn chuyển động. Lục Thừa Phong nói:
         ///- Ta đã đáp ứng sư phụ ngươi thả ngươi đi.
-        ///Thấy y bị điểm huyệt không phải là thủ pháp bản môn, tuy mình có thể giải huyệt giúp y nhưng đối với người điểm huyệt thì có chỗ bất kính, đang định cất tiếng hỏi thì Chu Thông đã bước qua búng vào hông Hoàn Nhan Khang mấy cái lại vỗ nhẹ mấy chưởng lên lưng y, giải khai huyệt đạo. Lục Thừa [rest of string was truncated]&quot;;.
+        ///Thấy y bị điểm huyệt không phải là thủ pháp bản môn, tuy mình có thể giải huyệt giúp y nhưng đối với người điểm huyệt thì có chỗ bất kính, đang định cất tiếng hỏi thì Chu Thông đã bước qua búng vào hông Hoàn Nhan Khang mấy cái lại vỗ nhẹ mấy chưởng lên lưng y, giải khai huyệt đạo. Lục [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c15 {
             get {
@@ -163,7 +173,7 @@ namespace EBook.Properties {
         ///
         ///Quách Hoàng hai người từ Trình phủ ra về mệt nhọc suốt nửa đêm, đang định về khách điếm nghỉ ngơi, chợt nghe tiếng vó ngựa vang lên, một kỵ mã từ phía nam phóng lên, đang dần dần tới gần đột nhiên dừng lại. Hoàng Dung nghĩ thầm:
         ///- Lại là chuyện gì lạ đây? Chắc cũng nhiệt náo lắm.
-        ///Lập tức triển khai khinh công chạy qua định nhìn cho rõ, Quách Tỉnh cũng chạy theo phía sau. Tới gần thì hoàn toàn bất ngờ, chỉ thấy Dương Khang nắm cương ngựa đứng ở cạnh đường trò chuyện với Âu Dương Kh [rest of string was truncated]&quot;;.
+        ///Lập tức triển khai khinh công chạy qua định nhìn cho rõ, Quách Tỉnh cũng chạy theo phía sau. Tới gần thì hoàn toàn bất ngờ, chỉ thấy Dương Khang nắm cương ngựa đứng ở cạnh đường trò chuyện với Âu Dươ [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c16 {
             get {
@@ -180,7 +190,7 @@ namespace EBook.Properties {
         ///Quách Tĩnh a một tiếng nói:
         ///- Giả chết à?
         ///Chu Bá Thông nói:
-        ///- Phải rồi. Té ra trước khi sư ca ta chết mấy ngày đã biết Tây độc rình rập gần đó, chỉ cần y chết là sẽ tới cướp kinh thư, nên y dùng nội công thượng thừa bế khí giả chết, nhưng nếu nói cho các đệ tử biết mọi người giả vờ khóc lóc thì cũng không thể giống lắm. Tây độc vô cùng giảo hoạt, nhất địn [rest of string was truncated]&quot;;.
+        ///- Phải rồi. Té ra trước khi sư ca ta chết mấy ngày đã biết Tây độc rình rập gần đó, chỉ cần y chết là sẽ tới cướp kinh thư, nên y dùng nội công thượng thừa bế khí giả chết, nhưng nếu nói cho các đệ tử biết mọi người giả vờ khóc lóc thì cũng không thể giống lắm. Tây độc vô cùng giảo hoạt,  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c17 {
             get {
@@ -194,7 +204,7 @@ namespace EBook.Properties {
         ///
         ///Quách Tĩnh đi theo tiếng bầy rắn, đi được vài mươi bước, dưới ánh trăng quả nhiên thấy hàng ngàn hàng vạn con rắn xanh bày thành hàng dài ngoằn ngoèo tiến lên. Hơn mười hán tử áo trắng tay cầm sào dài khua rắn, không ngừng hất những con rắn ra ngoài vào hàng. Quách Tĩnh giật nảy mình:
         ///- Những người này đem bấy nhiêu rắn tới đây làm gì? Chẳng lẽ là Tây độc tới rồi à?.
-        ///Lúc ấy bất kể nguy hiểm, núp sau gốc cây, theo bầy rắn đi lên phía bắc. Đám hán tử xua rắn tựa hồ võ không giỏi lắm, h [rest of string was truncated]&quot;;.
+        ///Lúc ấy bất kể nguy hiểm, núp sau gốc cây, theo bầy rắn đi lên phía bắc. Đám hán tử xua rắn tựa hồ võ không giỏi l [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c18 {
             get {
@@ -209,7 +219,7 @@ namespace EBook.Properties {
         ///Hồng Thất công không bao giờ ngờ cuộc thi đọc thuộc lòng sách lại thu được kết quả như thế, so với việc Quách Tỉnh vật Âu Dương Khắc ngã mười bảy mười tám vòng lại còn khiến y kinh ngạc hơn gấp mười, chỉ mừng rỡ cười toét miệng ra không ngậm lại được, nghe Âu Dương Khắc kêu một tiếng như thế, vội hỏi:
         ///- Cái gì? Ngươi không phục à?
         ///Âu Dương Khắc nói:
-        ///- Những câu mà Quách huynh đọc so với ghi chép trên kinh văn còn nhiều hơn, nhất định là y đã có Cửu âm chân kinh. Vãn bối lớn mật, muố [rest of string was truncated]&quot;;.
+        ///- Những câu mà Quách huynh đọc so với ghi chép trên kinh văn còn nhiều hơn, nhất định là y đã có Cửu âm chân kinh. Vãn bối lớn mậ [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c19 {
             get {
@@ -222,7 +232,7 @@ namespace EBook.Properties {
         ///Hồi 2. Giang Nam thất quái
         ///
         ///Nhan Liệt bước ra khỏi phòng, chỉ thấy giữa lối đi có một văn sĩ trung niên mang hài da, lẹp kẹp lẹp kẹp thành tiếng nghênh ngang bước tới trước mặt. Văn sĩ này vẻ mặt như cười mà không phải cười, trợn mắt méo miệng, dáng vẻ phờ phạc, toàn thân lấm lem dầu mỡ, áo quần xốc xếch, mặt đầy cáu ghét, xem ra ít nhất cũng hơn mười ngày chưa rửa mặt, cầm một cái quạt giấy rách lem luốc, vừa đi vừa phe phẩy.
-        ///Nhan Liệt thấy y rõ ràng là người tư văn mà dáng vẻ lại như thế bất giác cau mày [rest of string was truncated]&quot;;.
+        ///Nhan Liệt thấy y rõ ràng là người tư văn mà dáng vẻ lại như thế bất giác cau [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c2 {
             get {
@@ -239,7 +249,7 @@ namespace EBook.Properties {
         ///Rồi cởi tuột hết áo quần trên người, một cô gái áo trắng dùng khăn khô lau cho y. Quách Tĩnh mặt đỏ bừng, không dám cởi áo.
         ///Hồng Thất công cười nói:
         ///- Sợ cái gì? Họ ăn thịt ngươi à?
-        ///Hai cô gái áo trắng bước lên định cởi giày tháo d [rest of string was truncated]&quot;;.
+        ///Hai cô gái áo trắng bước lên định cởi già [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c20 {
             get {
@@ -251,7 +261,7 @@ namespace EBook.Properties {
         ///   Looks up a localized string similar to 
         ///Hồi 21. Đá nặng ngàn cân
         ///
-        ///Âu Dương Phong chỉ thấy trên người nóng ran, ván thuyền dưới chân chấn động rất mạnh, biết chiếc thuyền vỡ này trong chớp mắt sẽ chìm xuống biển, nhưng Hồng Thất công vẫn đánh ráo riết không hề ngơi tay, nếu không thi triển tuyệt chiêu ra sát thủ chỉ e hôm nay khó mà sống sót, ngọn xà trượng trên tay trái chợt rút về, tay phải quét mạnh ra. Hồng Thất công trúc bổng đập lên xà trượng, tay trái vung ra gạt tay y, chợt thấy cánh tay Âu Dương Phong theo thế cong lại, cử quyền mau như  [rest of string was truncated]&quot;;.
+        ///Âu Dương Phong chỉ thấy trên người nóng ran, ván thuyền dưới chân chấn động rất mạnh, biết chiếc thuyền vỡ này trong chớp mắt sẽ chìm xuống biển, nhưng Hồng Thất công vẫn đánh ráo riết không hề ngơi tay, nếu không thi triển tuyệt chiêu ra sát thủ chỉ e hôm nay khó mà sống sót, ngọn xà trượng trên tay trái chợt rút về, tay phải quét mạnh ra. Hồng Thất công trúc bổng đập lên xà trượng, tay trái vung ra gạt tay y, chợt thấy cánh tay Âu Dương Phong theo thế cong lại, cử quyền mau n [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c21 {
             get {
@@ -268,8 +278,7 @@ namespace EBook.Properties {
         ///- Ta đang nghĩ ba chuyện, đều rất khó khăn.
         ///Quách Tĩnh nói:
         ///- Cô thông minh như thế, chắc có cách thôi.
-        ///Hoàng Dung cười khẽ một tiếng, qua hồi lâu lại nhướng mày. Hồng Thất công nói:
-        ///- [rest of string was truncated]&quot;;.
+        ///Hoàng Dung cười khẽ một tiếng, qua hồi lâu lại nhướng mày. Hồng Thất côn [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c22 {
             get {
@@ -284,7 +293,7 @@ namespace EBook.Properties {
         ///Hồng Thất công, Chu Bá Thông, Quách Tĩnh, Hoàng Dung bốn người lên thuyền nhỏ đi về đất liền phía tây. Quách Tĩnh ngồi ở cuối thuyền chèo, Hoàng Dung thì không ngừng hỏi han Chu Bá Thông về việc cưỡi cá mập ngao du trên biển, Chu Bá Thông cao hứng, lập tức muốn tìm cách bắt cá mập để cùng Hoàng Dung nô đùa một phen.
         ///Quách Tĩnh thấy sắc mặt sư phụ có vẻ không hay, bèn hỏi:
         ///- Lão nhân gia người thấy thế nào?
-        ///Hồng Thất công không đáp, thở hổn hển, tiếng nghe khò khè. Sau khi y bị Âu  [rest of string was truncated]&quot;;.
+        ///Hồng Thất công không đáp, thở hổn hển, tiếng nghe khò khè. Sau khi y  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c23 {
             get {
@@ -300,7 +309,7 @@ namespace EBook.Properties {
         ///- Mình giết cô Ngốc không quan trọng, nhưng Tĩnh ca ca khỏe rồi nhất định sẽ cãi nhau với mình một trận.
         ///Lại nghĩ:
         ///- Cãi nhau với mình cũng được, nhưng biết đâu suốt đời y không nói tới chuyện này nhưng trong lòng cứ căm hận cũng rất vô vị. Thôi thôi thôi, chúng ta mạo hiểm chuyến này cho xong.
-        ///Lúc ấy bèn đóng cửa lạ [rest of string was truncated]&quot;;.
+        ///Lúc ấy bèn đóng [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c24 {
             get {
@@ -318,7 +327,7 @@ namespace EBook.Properties {
         ///Doãn Chí Bình thấy uy thế của Hoàng Dược Sư như thế biết người này không phải tầm thường, khom lưng nói:
         ///- Đệ tử Doãn Chí Bình môn hạ Trường Xuân tử phái Toàn Chân tham kiến tiền bối.
         ///Hoàng Dược Sư nói:
-        ///- Mọi người đều cú [rest of string was truncated]&quot;;.
+        ///- Mọi ngư [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c25 {
             get {
@@ -331,8 +340,7 @@ namespace EBook.Properties {
         ///Hồi 26. Thề mới, hẹn cũ
         ///
         ///Hoàng Dược Sư nghĩ không rõ vì sao có trận đánh với Toàn Chân thất tử, càng không rõ đã kết mối thù sâu, đúng là không có lý do gì, thấy Mai Siêu Phong hơi thở yếu dần, nghĩ tới ân oán mấy mươi năm, trong lòng vô cùng thương cảm, nhịn không được chảy nước mắt.
-        ///Mai Siêu Phong miệng thoáng nụ cười, vận công lực lần cuối, chát một tiếng, dùng tay phải đánh gãy tay trái, kế đập mạnh tay phải lên tảng đá kê cột nhà, cánh tay lập tức gãy đôi. Hoàng Dược Sư sửng sốt. Mai Siêu Phong nói:
-        ///- [rest of string was truncated]&quot;;.
+        ///Mai Siêu Phong miệng thoáng nụ cười, vận công lực lần cuối, chát một tiếng, dùng tay phải đánh gãy tay trái, kế đập mạnh tay phải lên tảng đá kê cột nhà, cánh tay lập tức gãy đôi. Hoàng Dược Sư sửng sốt. Mai Siêu Phong nó [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c26 {
             get {
@@ -345,7 +353,7 @@ namespace EBook.Properties {
         ///Hồi 27. Trước đài hiên viên
         ///
         ///Hai người đang đùa giỡn, tiếng chân lại vang lên ở thang lầu, ba trưởng lão Cái bang vừa theo Dương Khang đi xuống lúc nãy lại trở lên, bước tới cạnh bàn hai người Quách Hoàng làm lễ. Trong đó một người trắng trắng to béo, để một chòm râu bạc, nếu không phải quần áo trên người vá chằng vá đụp thì quả là có dáng vẻ của một đại thân sĩ đại tài chủ, y chưa nói đã cười, quả thật gió xuân đầy mặt, một làn hòa khí, nói:
-        ///- Mới rồi lão ăn mày họ Lỗ ngấm ngầm hạ độc thủ với hai vị, bọn  [rest of string was truncated]&quot;;.
+        ///- Mới rồi lão ăn mày họ Lỗ ngấm ngầm hạ độc thủ với hai vị,  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c27 {
             get {
@@ -361,7 +369,7 @@ namespace EBook.Properties {
         ///- Hiện chân tướng chưa rõ ràng, chúng ta phải hỏi kỹ cả hai bên, quan trọng nhất là tra xét cho ra việc sống chết của Hồng lão bang chủ.
         ///Ba trưởng lão phái áo sạch lại nói:
         ///- Chúng ta đã lập bang chủ, há lại tùy ý thay đổi? Quy củ nhiều đời của bang ta là quyết không được trái lệnh của bang chủ .
-        ///Bốn người tranh cãi không thôi. Lỗ Hữu Cước xương ngón tay đều gãy, cắn răng chịu đau, nhưng trong l [rest of string was truncated]&quot;;.
+        ///Bốn người tranh cãi không thôi. Lỗ Hữu Cước xương ngón tay đều gãy, cắn răng chịu đau, nhưng  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c28 {
             get {
@@ -373,7 +381,7 @@ namespace EBook.Properties {
         ///   Looks up a localized string similar to 
         ///Hồi 29. Gái ẩn đầm tối
         ///
-        ///Quách Tĩnh trên lưng điêu luôn miệng hò hét, gọi con tiểu hồng mã dưới đất chạy theo, trong chớp mắt đôi điêu đã bay khá xa. Đôi điêu tuy lớn nhưng cõng thêm người trên lưng rốt lại cũng khó bay xa, không bao lâu dần dần không chi trì được càng bay càng thấp, sau cùng hạ xuống đất. Quách Tĩnh nhảy xuống lưng điêu, chạy qua xem Hoàng Dung, thấy nàng nằm hôn mê trên lưng điêu, vội cởi áo buộc nàng ra, giúp nàng đẩy khí huyết lưu thông. Qua một hồi lâu, Hoàng Dung mới dần dần tỉnh lại, [rest of string was truncated]&quot;;.
+        ///Quách Tĩnh trên lưng điêu luôn miệng hò hét, gọi con tiểu hồng mã dưới đất chạy theo, trong chớp mắt đôi điêu đã bay khá xa. Đôi điêu tuy lớn nhưng cõng thêm người trên lưng rốt lại cũng khó bay xa, không bao lâu dần dần không chi trì được càng bay càng thấp, sau cùng hạ xuống đất. Quách Tĩnh nhảy xuống lưng điêu, chạy qua xem Hoàng Dung, thấy nàng nằm hôn mê trên lưng điêu, vội cởi áo buộc nàng ra, giúp nàng đẩy khí huyết lưu thông. Qua một hồi lâu, Hoàng Dung mới dần dần tỉnh l [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c29 {
             get {
@@ -386,7 +394,7 @@ namespace EBook.Properties {
         ///Hồi 3. Gió cát sa mạc
         ///
         ///Các sư trong chùa thấy Tiêu Mộc viên tịch đều đau thương khóc lóc. Có người băng bó giúp vết thương cho những người bị thương, dìu vào khách xá.
-        ///Chợt nghe trong cái vạc đồng dưới cái chuông có tiếng leng keng không dứt, không biết bên trong là quái vật gì các sư ngẩn mặt nhìn nhau, tay chân luống cuống, lúc ấy đồng thanh tụng Cao vương kinh, nào ngờ trong tiếng Cứu khổ cứu nạn. A di đà Phật, cái vạc vẫn không ngừng Khua vang, sau cùng có mười mấy người to gan xúm lại hợp lực dùng dây [rest of string was truncated]&quot;;.
+        ///Chợt nghe trong cái vạc đồng dưới cái chuông có tiếng leng keng không dứt, không biết bên trong là quái vật gì các sư ngẩn mặt nhìn nhau, tay chân luống cuống, lúc ấy đồng thanh tụng Cao vương kinh, nào ngờ trong tiếng Cứu khổ cứu nạn. A di đà Phật, cái vạc vẫn không ngừng Khua vang, sau cùng có mười mấy người to gan xúm lại hợp lực dùng [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c3 {
             get {
@@ -399,7 +407,7 @@ namespace EBook.Properties {
         ///Hồi 30. Nhất Đăng đại sư
         ///
         ///Hai người theo đường núi đi về phía trước, không bao lâu đã tới cuối đường, phía trước là một chiếc cầu đá rộng khoảng một thước bắc qua hai ngọn núi, mây mù bao phủ, nhìn không thấy đầu bên kia. Nếu ở dưới đất thì một con đường nhỏ rộng hơn thước chẳng đáng gì, nhưng chiếc cầu đá này thì bên dưới là vực sâu, đừng nói là đi lại, chỉ nhìn xuống một cái cũng không khỏi tim đập chân run. Hoàng Dung thở dài nói:
-        ///- Vị Đoàn Hoàng gia này ở ẩn kín đáo thật, dù ai có thù hận không đội trờ [rest of string was truncated]&quot;;.
+        ///- Vị Đoàn Hoàng gia này ở ẩn kín đáo thật, dù ai có thù hận không đội [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c30 {
             get {
@@ -414,7 +422,7 @@ namespace EBook.Properties {
         ///Nhất Đăng đại sư hạ giọng thở dài nói:
         ///- Mối họa thật sự là ở ngay ta. Ta là vua nước Đại Lý nhỏ, tuy không như thiên tử Trung Hoa trong hậu cung có ba ngàn người, nhưng số hậu phi cung tần cũng rất đông, ờ, đúng là làm ra tội nghiệt. Nhớ lại ta trước nay hiếu võ, ít gần đàn bà, ngay cả hoàng hậu cũng mấy ngày khó gặp mặt một lần thì các quý phi cung tần khác làm sao còn có ngày được gần gũi?
         ///Nói tới đó nhìn qua bốn người đệ tử nói:
-        ///- Lý do bên trong của chuyện này các ngươi vố [rest of string was truncated]&quot;;.
+        ///- Lý do bên trong của chuyện này các ng [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c31 {
             get {
@@ -428,7 +436,7 @@ namespace EBook.Properties {
         ///
         ///Mục Niệm Từ để Hoàng Dung cầm tay phải, y nhìn hoa rơi trên mặt nước, nói:
         ///- Ta thấy y giết Âu Dương Khắc, chỉ cho rằng từ đây y đã cải tà quy chính, lại thấy hai vị cao thủ Cái bang cung cung kính kính đưa y đi, ta vốn có biết hai vị đại thúc Cái bang ấy, biết họ là thuộc hạ thân tín của Hồng Thất công lão nhân gia mà đối xử với y như thế, trong lòng rất mừng rỡ, bèn đi cùng y.
-        ///Sau khi ta tới Nhạc Châu, Cái bang mở đại hội ở Quân sơn. Trước đó y đã nói riêng với ta Hồng ân sư từ [rest of string was truncated]&quot;;.
+        ///Sau khi ta tới Nhạc Châu, Cái bang mở đại hội ở Quân sơn. Trước đó y đã nói riêng với ta Hồng ân  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c32 {
             get {
@@ -441,7 +449,7 @@ namespace EBook.Properties {
         ///Hồi 33. Nạn lớn ngày sau
         ///
         ///Quách Tĩnh và Hoàng Dung lúc ấy trong lòng sung sướng, vốn không muốn dính vào chuyện không đâu, nhưng nghe thấy ba chữ Lão Ngoan đồng đều giật nảy mình, cùng nhảy vọt lên đuổi mau theo. Hai người phía trước võ công bình thường, vẫn chưa hay biết. Ra khỏi trấn lại chạy thêm năm sáu dặm, hai người kia quanh qua một chỗ vách núi, chỉ nghe tiếng quát tháo chửi mắng không ngừng từ sau núi vang ra.
-        ///Quách Hoàng hai người gia tăng cước bộ, quanh qua góc núi, chỉ thấy một đám người đang x [rest of string was truncated]&quot;;.
+        ///Quách Hoàng hai người gia tăng cước bộ, quanh qua góc núi, chỉ thấy một đám người đa [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c33 {
             get {
@@ -455,7 +463,7 @@ namespace EBook.Properties {
         ///
         ///Hoàng Dung múa đến lúc gấp đột nhiên ồ một tiếng ngồi xổm xuống dưới gốc cây, giơ tay vẫy vẫy Quách Tĩnh, sãi chân chạy mau vào rừng. Quách Tĩnh sợ lạc đường, theo sát phía sau, không dám tụt lại nửa bước. Hoàng Dung chạy vòng qua vòng lại một lúc chợt dừng lại chỉ vào một đống gì đó dưới đất hỏi:
         ///- Cái gì thế này?
-        ///Quách Tĩnh bước tới mấy bước, chỉ thấy một con ngựa vàng ngã lăn trên mặt đất, vội cúi xuống nhìn kỹ, nhận ra là con ngựa vàng của Tam sư phụ Hàn Bảo Câu vẫn cười, đưa  [rest of string was truncated]&quot;;.
+        ///Quách Tĩnh bước tới mấy bước, chỉ thấy một con ngựa vàng ngã lăn trên mặt đất, vội cúi xuống nhìn kỹ, nhận ra là con ngựa vàng của Tam sư phụ Hàn Bảo Câu vẫn cười, [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c34 {
             get {
@@ -469,7 +477,7 @@ namespace EBook.Properties {
         ///
         ///Thuyền vừa cập bến, hai ba mươi người bước lên, bọn Bành Liên Hổ, sa Thông Thiên đều có trong đó. Hai người lên bờ cuối cùng một cao một thấp, người cao là Triệu vương Hoàn Nhan Hồng Liệt nước Đại Kim, người thấp là bang chủ Thiết chưởng bang Cừu Thiên Nhận. Xem ra Hoàn Nhan Hồng Liệt cậy có Âu Dương Phong, Cừu Thiên Nhận hai người xuất mã, lần tỷ võ này chỉ thắng chứ không có bại nên ngang nhiên đích thân trở lại Giang Nam.
         ///Hoàng Dung chỉ Cừu Thiên Nhận nói:
-        ///- Cha, con bị  [rest of string was truncated]&quot;;.
+        ///- Cha, co [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c35 {
             get {
@@ -488,7 +496,7 @@ namespace EBook.Properties {
         ///Chợt nghe Hoàng Dung nói:
         ///- Cô Ngốc, vị hảo huynh đệ này đối đãi với ngươi rất tốt phải không?
         ///Cô Ngốc nói:
-        ///- Đúng thế, y muốn đưa [rest of string was truncated]&quot;;.
+        ///- Đúng thế,  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c36 {
             get {
@@ -500,7 +508,7 @@ namespace EBook.Properties {
         ///   Looks up a localized string similar to 
         ///Hồi 37. Trên trời rơi xuống
         ///
-        ///Một hôm Quách Tĩnh đóng quân cạnh Na Mật Hà, buổi tối đang trong trướng đọc binh thư, chợt nghe ngoài trướng có một tiếng chát nhỏ vang lên, cửa trướng mở ra, một người bước vào. Đám vệ binh trước trướng bước ra quát tháo ngăn lại, bị người đó khẽ vung tay nhất nhất điểm ngã. Người ấy ngẩng đầu lên cười, dưới ánh đèn nhìn thấy rất rõ, chính là Tây độc Âu Dương Phong. Quách Tĩnh cách Trung thổ hàng vạn dặm, không ngờ ở nơi tha hương tuyệt vực này lại gặp y, bất giác mừng sợ xen  [rest of string was truncated]&quot;;.
+        ///Một hôm Quách Tĩnh đóng quân cạnh Na Mật Hà, buổi tối đang trong trướng đọc binh thư, chợt nghe ngoài trướng có một tiếng chát nhỏ vang lên, cửa trướng mở ra, một người bước vào. Đám vệ binh trước trướng bước ra quát tháo ngăn lại, bị người đó khẽ vung tay nhất nhất điểm ngã. Người ấy ngẩng đầu lên cười, dưới ánh đèn nhìn thấy rất rõ, chính là Tây độc Âu Dương Phong. Quách Tĩnh cách Trung thổ hàng vạn dặm, không ngờ ở nơi tha hương tuyệt vực này lại gặp y, bất giác mừng sợ x [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c37 {
             get {
@@ -519,7 +527,7 @@ namespace EBook.Properties {
         /// Rồi đưa cái đầu lâu cho Toàn Kim Phát, nói:
         ///- Cẩn thận để vào chỗ cũ, đừng để họ thấy có dấu vết bị di động.
         ///Toàn Kim Phát để xong đầu lâu vào chỗ cũ quay lại cạnh Kha Trấn ác. Sáu anh em ngơ ngác nhìn đại ca, chờ y giải thích.
-        ///Chỉ thấy y [rest of string was truncated]&quot;;.
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c4 {
             get {
@@ -531,7 +539,7 @@ namespace EBook.Properties {
         ///   Looks up a localized string similar to 
         ///Hồi 5. Cung loan bắn điêu
         ///
-        ///Đoàn người xuống khỏi gò, đi không bao lâu chợt nghe phía trước có tiếng thú dữ gầm rít từng hồi từng hồi vang tới. Hàn Bảo Câu kéo cương thúc ngựa phóng về phía trước, được một lúc chợt con hoàng mã đứng lại, thúc thế nào cũng bất động. Hàn Bảo Câu biết có chuyện lạ bèn nhìn ra xa, chỉ thấy trước mặt có một đám người xúm thành vòng tròn, có mấy con báo săn đang cắn xé vật gì đó trên mặt đất. Y biết con ngựa sợ báo, bèn nhảy xuống ngựa rút ngọn Kim long tiên ra cầm ở tay bước lên [rest of string was truncated]&quot;;.
+        ///Đoàn người xuống khỏi gò, đi không bao lâu chợt nghe phía trước có tiếng thú dữ gầm rít từng hồi từng hồi vang tới. Hàn Bảo Câu kéo cương thúc ngựa phóng về phía trước, được một lúc chợt con hoàng mã đứng lại, thúc thế nào cũng bất động. Hàn Bảo Câu biết có chuyện lạ bèn nhìn ra xa, chỉ thấy trước mặt có một đám người xúm thành vòng tròn, có mấy con báo săn đang cắn xé vật gì đó trên mặt đất. Y biết con ngựa sợ báo, bèn nhảy xuống ngựa rút ngọn Kim long tiên ra cầm ở tay bước  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c5 {
             get {
@@ -552,8 +560,7 @@ namespace EBook.Properties {
         ///Hàn Tiểu Oanh nói:
         ///- Quen à? Vậy thì nếu không phải bạn bè ắt là địch nhân.
         ///Toàn Kim Phát trầm ngâm nói:
-        ///- Trong các bạn bè mà chúng ta quen không ai có nội công cao minh như thế.
-        /// [rest of string was truncated]&quot;;.
+        ///- Trong các bạn bè mà chúng ta quen không ai có nội công cao mi [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c6 {
             get {
@@ -566,7 +573,7 @@ namespace EBook.Properties {
         ///Hồi 7. Tỉ võ chiêu thân
         ///
         ///Giang Nam lục quái và Quách Tĩnh ngày đi đêm nghỉ tiến về phía đông nam, đường đi không phải một ngày, qua khỏi vùng sa mạc thảo nguyên.
-        ///Hôm ấy còn cách Trương Gia Khẩu không xa. Quách Tĩnh lần đầu đặt chân tới Trung thổ, cảnh vật đều khác với bình sinh vẫn thấy, trong lòng rất khoan khoái, kẹp chặt hai đùi giục ngựa phi mau, chỉ thấy bên tai gió lộng vù vù, nhà cửa cây cối không ngừng chạy ngược lại phía sau. Đến lúc con tiểu hồng mã chạy một hơi tới cạnh sông Hắc Thủy y mới dừng  [rest of string was truncated]&quot;;.
+        ///Hôm ấy còn cách Trương Gia Khẩu không xa. Quách Tĩnh lần đầu đặt chân tới Trung thổ, cảnh vật đều khác với bình sinh vẫn thấy, trong lòng rất khoan khoái, kẹp chặt hai đùi giục ngựa phi mau, chỉ thấy bên tai gió lộng vù vù, nhà cửa cây cối không ngừng chạy ngược lại phía sau. Đến lúc con tiểu hồng mã chạy một hơi tới cạnh sông Hắc Thủy y mới d [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c7 {
             get {
@@ -578,7 +585,7 @@ namespace EBook.Properties {
         ///   Looks up a localized string similar to 
         ///Hồi 8. Chứng tỏ bản lĩnh
         ///
-        ///Vương Xử Nhất cước bộ rất mau, không bao lâu đã ra tới ngoài thành, lại chạy thêm vài dặm, tới phía sau một ngọn núi. Y không ngừng gia tăng cước bộ, có ý muốn dò xét võ công của Quách Tĩnh, càng lúc càng chạy mau. Quách Tĩnh ngày trước theo Đan Dương tử Mã Ngọc học công phu thổ nạp, trong hai năm đêm nào cứng lên xuống dốc núi dựng đứng, nên lúc ấy chạy mau một hồi, tuy vừa ác đấu xong nhưng vẫn chi trì được. Gió mạnh quét tuyết vào mặt. Vương Xử Nhất chạy ra phía sau một ngọn nú [rest of string was truncated]&quot;;.
+        ///Vương Xử Nhất cước bộ rất mau, không bao lâu đã ra tới ngoài thành, lại chạy thêm vài dặm, tới phía sau một ngọn núi. Y không ngừng gia tăng cước bộ, có ý muốn dò xét võ công của Quách Tĩnh, càng lúc càng chạy mau. Quách Tĩnh ngày trước theo Đan Dương tử Mã Ngọc học công phu thổ nạp, trong hai năm đêm nào cứng lên xuống dốc núi dựng đứng, nên lúc ấy chạy mau một hồi, tuy vừa ác đấu xong nhưng vẫn chi trì được. Gió mạnh quét tuyết vào mặt. Vương Xử Nhất chạy ra phía sau một ngọn [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c8 {
             get {
@@ -595,7 +602,7 @@ namespace EBook.Properties {
         /// Quách Tĩnh đang nằm phục dưới chân tường nghe ngóng động tĩnh trong hậu viện, nghe nàng nói thế, trong lòng chợt thấy sung sướng êm đềm không sao tả được.
         ///Qua một lúc, chợt nghe tiếng bước chân, hai người vừa nói vừa cười đi tới, chỉ nghe một người nói:
         ///- Tiểu vương gia nhốt vị cô nương ấy ở đây, ngươi đoán là để làm gì nào?
-        ///Người kia  [rest of string was truncated]&quot;;.
+        ///Ng [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ahxd_c9 {
             get {
@@ -625,6 +632,76 @@ namespace EBook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap close1 {
+            get {
+                object obj = ResourceManager.GetObject("close1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap close2 {
+            get {
+                object obj = ResourceManager.GetObject("close2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap closee {
+            get {
+                object obj = ResourceManager.GetObject("closee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap homebtn {
+            get {
+                object obj = ResourceManager.GetObject("homebtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap homebtn1 {
+            get {
+                object obj = ResourceManager.GetObject("homebtn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_search {
+            get {
+                object obj = ResourceManager.GetObject("ic_search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ic_search1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_search1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap kripto_search_b {
             get {
                 object obj = ResourceManager.GetObject("kripto-search-b", resourceCulture);
@@ -638,6 +715,16 @@ namespace EBook.Properties {
         public static System.Drawing.Bitmap kripto_search_next2 {
             get {
                 object obj = ResourceManager.GetObject("kripto_search_next2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap listFavor {
+            get {
+                object obj = ResourceManager.GetObject("listFavor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -675,9 +762,89 @@ namespace EBook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap maximize {
+            get {
+                object obj = ResourceManager.GetObject("maximize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap minium {
+            get {
+                object obj = ResourceManager.GetObject("minium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap more {
+            get {
+                object obj = ResourceManager.GetObject("more", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap small {
+            get {
+                object obj = ResourceManager.GetObject("small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap smallBCC_CLASS_HOME_05 {
             get {
                 object obj = ResourceManager.GetObject("smallBCC-CLASS-HOME-05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap star {
+            get {
+                object obj = ResourceManager.GetObject("star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap starborder {
+            get {
+                object obj = ResourceManager.GetObject("starborder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap starborder1 {
+            get {
+                object obj = ResourceManager.GetObject("starborder1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap subbtn {
+            get {
+                object obj = ResourceManager.GetObject("subbtn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
