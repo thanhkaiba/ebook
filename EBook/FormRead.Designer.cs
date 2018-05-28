@@ -41,6 +41,7 @@ namespace EBook
             this.btnZoomIn = new System.Windows.Forms.Button();
             this.btnZoomOut = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.tbSearch = new System.Windows.Forms.RichTextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@ namespace EBook
             this.panel5 = new System.Windows.Forms.Panel();
             this.cbChapter = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tbSearch = new System.Windows.Forms.RichTextBox();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -241,6 +241,22 @@ namespace EBook
             this.panel6.Size = new System.Drawing.Size(239, 35);
             this.panel6.TabIndex = 16;
             // 
+            // tbSearch
+            // 
+            this.tbSearch.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.tbSearch.Location = new System.Drawing.Point(17, 9);
+            this.tbSearch.Multiline = false;
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.tbSearch.Size = new System.Drawing.Size(170, 20);
+            this.tbSearch.TabIndex = 7;
+            this.tbSearch.Text = "";
+            this.tbSearch.WordWrap = false;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
@@ -254,6 +270,7 @@ namespace EBook
             this.btnSearch.Size = new System.Drawing.Size(38, 35);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel7
             // 
@@ -395,9 +412,8 @@ namespace EBook
             this.cbChapter.Name = "cbChapter";
             this.cbChapter.Size = new System.Drawing.Size(227, 26);
             this.cbChapter.TabIndex = 21;
-            this.cbChapter.SelectedIndexChanged += new System.EventHandler(this.cbChapter_SelectedIndexChanged_1);
             this.cbChapter.SelectionChangeCommitted += new System.EventHandler(this.cbChapter_SelectedIndexChanged);
-            this.cbChapter.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbChapter_onMouseClick);
+           
             // 
             // panel8
             // 
@@ -407,21 +423,6 @@ namespace EBook
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(929, 491);
             this.panel8.TabIndex = 16;
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.BackColor = System.Drawing.Color.AliceBlue;
-            this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.tbSearch.Location = new System.Drawing.Point(17, 9);
-            this.tbSearch.Multiline = false;
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.tbSearch.Size = new System.Drawing.Size(170, 20);
-            this.tbSearch.TabIndex = 7;
-            this.tbSearch.Text = "";
-            this.tbSearch.WordWrap = false;
             // 
             // FormRead
             // 

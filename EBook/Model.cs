@@ -29,5 +29,23 @@ namespace EBook
         public string content { get; set; }
         public int pageNumber { get; set; }
         public int idChapter { get; set; }
+        public int startIndex { get; set; }
+        public int endIndex { get; set; }
+    }
+
+    public class SearchResult
+    {
+        public SearchResult(int chapterId, int page, int index, int mark) 
+        {
+            this.chapterId = chapterId;
+            this.page = page;
+            this.index = index;
+            this.mark = mark;
+            
+        }
+        public int chapterId { get; set; }
+        public int page { get; set; }
+        public int index { get; set; }
+        public int mark { get; set; }
     }
 }

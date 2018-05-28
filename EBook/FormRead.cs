@@ -6,15 +6,19 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 using System.Collections.Generic;
+using System.Text;
 
 namespace EBook
 {
     public partial class FormRead : Form
     {
         private Novel novel;
+       
+        private string[] keys;
+        private StringBuilder novelContent = new StringBuilder();
         private int[] indexArray;
         private List<Page> bookmarks = new List<Page>();
-        
+        private List<SearchResult> searchResults = new List<SearchResult>();
         private int currentChapter = 0;
         private int currentPageIndex = 0;
         private int totalPage = 0;
@@ -23,22 +27,25 @@ namespace EBook
         //Regex regex = null;
         MatchCollection matches;
         //private int number = 1;
-        //private int index = 0;
-      //  Boolean textChanged = false;
-        
-       
+        private int index = 0;
+        Boolean textChanged = false;
+
+
         public FormRead(Novel novel)
         {
             this.novel = novel;
             string connetionString = "Data Source=DESKTOP-DAUSDI2\\SQLEXPRESS;Initial Catalog=kimdungnovel;Integrated Security=True;MultipleActiveResultSets=true";
             SqlConnection cnn = new SqlConnection(connetionString);
-            try {
+            try
+            {
                 cnn.Open();
                 SqlCommand command = new SqlCommand("SELECT * FROM chapter WHERE idnovel = '" + novel.id + "';", cnn);
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     int pageNumber = 1;
+                    int startIndex = 0;
+                    
                     while (reader.Read())
                     {
                         Chapter chapter = new Chapter();
@@ -57,13 +64,19 @@ namespace EBook
                                 page.idChapter = chapter.number - 1;
                                 page.pageNumber = pageNumber++;
                                 page.bookmark = (subReader.GetInt32(3) == 1);
-                                
+                                page.startIndex = startIndex;
+                                page.endIndex = startIndex + page.content.Length;
+                                startIndex = page.endIndex + 1;
+
                                 if (page.bookmark)
                                 {
                                     page.name = subReader.GetString(4);
                                     bookmarks.Add(page);
                                 }
                                 chapter.pages.Add(page);
+                                
+                                novelContent.Append(page.content);
+                                
                             }
                         }
                         novel.chapters.Add(chapter);
@@ -71,26 +84,28 @@ namespace EBook
                 }
 
                 cnn.Close();
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 MessageBox.Show("Can't load novel's content! ");
             }
             InitializeComponent();
             addContent();
-            
+
         }
 
         public void addContent()
         {
-            
-            
+
+
             indexArray = new int[novel.chapters.Count];
-            
-            for (int i = 0; i < novel.chapters.Count; i++) {
+
+            for (int i = 0; i < novel.chapters.Count; i++)
+            {
                 indexArray[i] = totalPage - 1;
                 totalPage += novel.chapters[i].pages.Count;
                 this.cbChapter.Items.Add(novel.chapters[i].name);
-                
+
             }
             foreach (Page bookmark in bookmarks)
             {
@@ -98,10 +113,10 @@ namespace EBook
             }
             setContent(currentChapter, currentPageIndex);
             this.lbOfPage.Text = "of " + totalPage.ToString();
-            
+
 
         }
-        
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -119,7 +134,7 @@ namespace EBook
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-       {
+        {
             //this.btnSearch.Image = global::EBook.Properties.Resources.kripto_search_b;
             //textChanged = true;
             //matches = null;
@@ -146,8 +161,8 @@ namespace EBook
 
         //private void buttonSearch_Click(object sender, EventArgs e)
         //{
-            
-           
+
+
         //    if (textChanged)
         //    {
         //        string[] key = tbSearch.Text.Trim().Split(' ');
@@ -160,12 +175,12 @@ namespace EBook
         //        }
         //        pattern += ")+.*[.:;!\\n?]";
         //        regex = new Regex(pattern);
-                
+
         //    }
 
         //    if ((matches == null ||index == matches.Count) && temp <= Number_Chapter)
         //    {
-              
+
         //        string ChapterContent = "";
         //        index = 0;
         //        do
@@ -173,8 +188,8 @@ namespace EBook
         //            string Chapter = novel + "_c" + temp;
         //            ChapterContent = res.GetProperty(Chapter).GetValue(r) as String;
         //            matches = null;
-                    
-                    
+
+
         //            if (regex.IsMatch(ChapterContent))
         //            {
         //                matches = regex.Matches(ChapterContent);
@@ -183,7 +198,7 @@ namespace EBook
         //                {
         //                    this.Content.Text = ChapterContent;
         //                    markText(ChapterContent);
-                           
+
         //                }
         //                temp++;
         //                break;
@@ -191,7 +206,7 @@ namespace EBook
         //            temp++;
         //        } while (temp <= Number_Chapter);
         //    }
-                  
+
         //    if (matches != null && matches.Count > 0)
         //    {
 
@@ -210,7 +225,7 @@ namespace EBook
         //    textChanged = false;
 
         //}
-        
+
 
         //private void chapterLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         //{
@@ -222,7 +237,7 @@ namespace EBook
 
         //    this.Content.Text = ChapterContent;
         //    markText(ChapterContent);
-            
+
         //    if (number < Number_Chapter)
         //        number++;
         //    else
@@ -234,7 +249,7 @@ namespace EBook
         {
             int len = Content.TextLength;
             string[] wrongWords = CheckVietnamese.Check(pageContent);
-           
+
             foreach (string wrongWord in wrongWords)
             {
                 int index = 0;
@@ -253,39 +268,14 @@ namespace EBook
             }
         }
 
-        private void Order() 
-        {
-            string[] keys = tbSearch.Text.Trim().Split(' ');
-            int len = matches.Count;
-            int[] priority = new int[len];
-            resultsIndex = new int[len];
-            for (int i = 0; i < len; i++)
-            {
-                int n = 0;
-                foreach(string key in keys)
-                {
-                    if (matches[i].Value.Contains(key))
-                    {
-                        n++;
-                    }
-                }
-                priority[i] = n;
 
-            }
-            for (int i = 0; i < len; i++)
-            {
-                resultsIndex[i] = i;
-            }
-            Array.Sort(priority, resultsIndex);
-            Array.Reverse(resultsIndex);  
-        }
 
         private void label6_Click(object sender, EventArgs e)
         {
 
         }
 
-        
+
 
         private void Content_TextChanged(object sender, EventArgs e)
         {
@@ -304,9 +294,9 @@ namespace EBook
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
         }
-        
+
 
         private void btnZoomOut_Click(object sender, EventArgs e)
         {
@@ -334,7 +324,7 @@ namespace EBook
             Content.BackColor = color.Color;
         }
 
-       
+
         private void btnFavor_Click(object sender, EventArgs e)
         {
             favor = !favor;
@@ -347,7 +337,7 @@ namespace EBook
                 {
                     string bookmarkName = form.getBookmarkName();
                     btnFavor.Image = global::EBook.Properties.Resources.star;
-                  
+
                     string connetionString = "Data Source=DESKTOP-DAUSDI2\\SQLEXPRESS;Initial Catalog=kimdungnovel;Integrated Security=True;MultipleActiveResultSets=true";
                     SqlConnection cnn = new SqlConnection(connetionString);
                     try
@@ -366,7 +356,7 @@ namespace EBook
                     }
 
                 }
-               
+
             }
             else
             {
@@ -389,7 +379,7 @@ namespace EBook
 
             }
             cbBookmark.Items.Clear();
-            
+
             foreach (Page bookmark in bookmarks)
             {
                 this.cbBookmark.Items.Add(bookmark.name);
@@ -401,20 +391,22 @@ namespace EBook
         {
             if (e.KeyChar == 13)
             {
-                
+
                 int selectedPage = Int32.Parse(rtbCurentPage.Text);
                 if (selectedPage > totalPage)
                 {
                     btnLast_Click(sender, e);
-                } else
+                }
+                else
                 {
-                    
+
                     rtbCurentPage.Text = (selectedPage).ToString();
-                    if (selectedPage - 1 > indexArray[indexArray.Length-1])
+                    if (selectedPage - 1 > indexArray[indexArray.Length - 1])
                     {
                         currentChapter = indexArray.Length - 1;
                         currentPageIndex = selectedPage - 2 - indexArray[indexArray.Length - 1];
-                    } else
+                    }
+                    else
                     {
                         for (int i = 0; i < indexArray.Length; i++)
                         {
@@ -435,16 +427,16 @@ namespace EBook
 
                     setContent(currentChapter, currentPageIndex);
 
-                } 
+                }
 
             }
             else if (!char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
             }
-            
 
-            
+
+
         }
 
 
@@ -456,20 +448,21 @@ namespace EBook
                 {
                     currentChapter++;
                     currentPageIndex = -1;
-                    
-                } 
-              
-            } else
+
+                }
+
+            }
+            else
             {
-                if (currentPageIndex + 1== novel.chapters[currentChapter].pages.Count)
+                if (currentPageIndex + 1 == novel.chapters[currentChapter].pages.Count)
                 {
                     return;
                 }
             }
             setContent(currentChapter, currentPageIndex + 1);
-            
+
             currentPageIndex++;
-            
+
         }
 
         private void btnPrev_Click(object sender, EventArgs e)
@@ -492,31 +485,33 @@ namespace EBook
                 }
             }
             setContent(currentChapter, currentPageIndex - 1);
-           
+
             currentPageIndex--;
-            
+
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            currentChapter = novel.chapters.Count - 1; 
+            currentChapter = novel.chapters.Count - 1;
             currentPageIndex = novel.chapters[currentChapter].pages.Count - 1;
             setContent(currentChapter, currentPageIndex);
-            
+
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
             currentChapter = 0;
-            
+
             currentPageIndex = 0;
             setContent(currentChapter, currentPageIndex);
-            
+
         }
 
         private void setContent(int chapter, int pageIndex)
         {
             this.Content.Text = novel.chapters[chapter].pages[pageIndex].content;
+            currentChapter = chapter;
+            currentPageIndex = pageIndex;
             if (novel.chapters[chapter].pages[pageIndex].bookmark)
             {
                 favor = true;
@@ -527,14 +522,14 @@ namespace EBook
                 favor = false;
                 btnFavor.Image = global::EBook.Properties.Resources.starborder;
             }
-         
+
             cbChapter.SelectedIndex = cbChapter.FindStringExact(novel.chapters[chapter].name);
             this.rtbCurentPage.Text = novel.chapters[chapter].pages[pageIndex].pageNumber.ToString();
             markText(Content.Text);
-            
+
         }
 
-     
+
 
         private void cbBookmark_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -543,14 +538,10 @@ namespace EBook
             currentChapter = page.idChapter;
             currentPageIndex = page.pageNumber - 2 - indexArray[currentChapter];
             setContent(currentChapter, currentPageIndex);
-         
+
 
         }
 
-        private void cbChapter_onMouseClick(object sender, MouseEventArgs e)
-        {
-       
-        }
 
         private void cbChapter_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -559,10 +550,6 @@ namespace EBook
             setContent(currentChapter, currentPageIndex);
         }
 
-        private void cbChapter_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -572,6 +559,82 @@ namespace EBook
                 Font currentFont = Content.Font;
                 Content.Font = new System.Drawing.Font(fontDialog.Font.FontFamily, currentFont.Size, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+
+            if (textChanged)
+            {
+                keys = tbSearch.Text.Trim().Split(' ');
+                string pattern = "(";
+                for (int i = 0; i < keys.Length; i++)
+                {
+                    pattern += "\\W?" + keys[i] + "\\W";
+                    if (i != keys.Length - 1)
+                        pattern += "|";
+                }
+                pattern += ")+";
+                matches = Regex.Matches(novelContent.ToString(), pattern);
+                Order();
+                textChanged = false;
+            }
+
+            if (index < resultsIndex.Length - 1)
+            {
+                for (int i = 0; i < novel.chapters.Count; i++)
+                {
+                    for (int j = 0; j < novel.chapters[i].pages.Count; j++)
+                    {
+                        if (matches[resultsIndex[index]].Index >= novel.chapters[i].pages[j].startIndex && (matches[resultsIndex[index]].Index <= novel.chapters[i].pages[j].endIndex))
+                        {
+                            /* bôi đen kết quả */
+                            setContent(i, j);
+                            this.Content.Select(matches[resultsIndex[index]].Index - novel.chapters[i].pages[j].startIndex, matches[resultsIndex[index]].Length);
+                            this.Content.Focus();
+                            index++;
+                            return;
+                        }
+                    }
+                }
+                
+            }
+
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            index = 0;
+            textChanged = true;
+            matches = null;
+        }
+
+        private void Order()
+        {
+            
+            int len = matches.Count;
+            int[] priority = new int[len];
+            resultsIndex = new int[len];
+            for (int i = 0; i < len; i++)
+            {
+                int n = 0;
+                foreach (string key in keys)
+                {
+                    if (matches[i].Value.Contains(key))
+                    {
+                        n++;
+                    }
+                }
+                priority[i] = n;
+
+            }
+            for (int i = 0; i < len; i++)
+            {
+                resultsIndex[i] = i;
+            }
+            Array.Sort(priority, resultsIndex);
+            Array.Reverse(resultsIndex);
         }
     }
 }
