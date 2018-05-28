@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddBookmark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddBookmark.Designer.cs">
+      <DependentUpon>FormAddBookmark.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckRule.cs" />
     <Compile Include="FormRead.cs">
       <SubType>Form</SubType>
@@ -72,6 +78,9 @@
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Compile Include="SearchKey.cs" />
+    <EmbeddedResource Include="FormAddBookmark.resx">
+      <DependentUpon>FormAddBookmark.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRead.resx">
       <DependentUpon>FormRead.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +222,11 @@
     <None Include="Resources\anhhungxadieu\c37.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icchangefont.png" />
+    <None Include="Resources\icbaccolor1.png" />
+    <None Include="Resources\ictextcolor1.png" />
+    <None Include="Resources\icbaccolor.png" />
+    <None Include="Resources\ictextcolor.png" />
     <None Include="Resources\listFavor.png" />
     <None Include="Resources\star.png" />
     <None Include="Resources\starborder1.png" />

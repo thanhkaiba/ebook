@@ -80,3 +80,29 @@ C:\Users\TienThanh\Desktop\ebook (1)\ebook\EBook\obj\Debug\EBook.csproj.Generate
 C:\Users\TienThanh\Desktop\ebook (1)\ebook\EBook\obj\Debug\EBook.csproj.CoreCompileInputs.cache
 C:\Users\TienThanh\Desktop\ebook (1)\ebook\EBook\obj\Debug\EBook.exe
 C:\Users\TienThanh\Desktop\ebook (1)\ebook\EBook\obj\Debug\EBook.pdb
+C:\Users\train\Desktop\ebook\EBook\bin\Debug\EBook.exe.config
+C:\Users\train\Desktop\ebook\EBook\bin\Debug\EBook.exe
+C:\Users\train\Desktop\ebook\EBook\bin\Debug\EBook.pdb
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.csprojResolveAssemblyReference.cache
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.FormRead.resources
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.FormStart.resources
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.Properties.Resources.resources
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.Resource.resources
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.csproj.GenerateResource.Cache
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.csproj.CoreCompileInputs.cache
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.exe
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.pdb
+C:\Users\train\Desktop\ebook\EBook\obj\Debug\EBook.FormAddBookmark.resources
+C:\Users\TienThanh\Downloads\ebook\EBook\bin\Debug\EBook.exe.config
+C:\Users\TienThanh\Downloads\ebook\EBook\bin\Debug\EBook.exe
+C:\Users\TienThanh\Downloads\ebook\EBook\bin\Debug\EBook.pdb
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.csprojResolveAssemblyReference.cache
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.FormAddBookmark.resources
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.FormRead.resources
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.FormStart.resources
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.Properties.Resources.resources
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.Resource.resources
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.csproj.GenerateResource.cache
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.csproj.CoreCompileInputs.cache
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.exe
+C:\Users\TienThanh\Downloads\ebook\EBook\obj\Debug\EBook.pdb

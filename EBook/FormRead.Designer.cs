@@ -27,9 +27,11 @@ namespace EBook
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRead));
             this.Content = new System.Windows.Forms.RichTextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnFavor = new System.Windows.Forms.Button();
             this.cbBookmark = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,7 +41,6 @@ namespace EBook
             this.btnZoomIn = new System.Windows.Forms.Button();
             this.btnZoomOut = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.tbSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -52,6 +53,7 @@ namespace EBook
             this.panel5 = new System.Windows.Forms.Panel();
             this.cbChapter = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.tbSearch = new System.Windows.Forms.RichTextBox();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -67,18 +69,18 @@ namespace EBook
             this.Content.BackColor = System.Drawing.Color.White;
             this.Content.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Content.ForeColor = System.Drawing.Color.Black;
             this.Content.Location = new System.Drawing.Point(0, 0);
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(929, 491);
             this.Content.TabIndex = 6;
-            this.Content.Text = "ahihi";
+            this.Content.Text = "";
             this.Content.TextChanged += new System.EventHandler(this.Content_TextChanged);
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel10.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.panel6);
@@ -90,6 +92,7 @@ namespace EBook
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.button3);
             this.panel11.Controls.Add(this.btnFavor);
             this.panel11.Controls.Add(this.cbBookmark);
             this.panel11.Controls.Add(this.button2);
@@ -101,14 +104,30 @@ namespace EBook
             this.panel11.Size = new System.Drawing.Size(434, 35);
             this.panel11.TabIndex = 17;
             // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::EBook.Properties.Resources.icchangefont;
+            this.button3.Location = new System.Drawing.Point(128, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(35, 35);
+            this.button3.TabIndex = 24;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // btnFavor
             // 
             this.btnFavor.FlatAppearance.BorderSize = 0;
-            this.btnFavor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnFavor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnFavor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnFavor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
             this.btnFavor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFavor.Image = global::EBook.Properties.Resources.starborder;
-            this.btnFavor.Location = new System.Drawing.Point(388, -3);
+            this.btnFavor.Location = new System.Drawing.Point(171, -3);
             this.btnFavor.Name = "btnFavor";
             this.btnFavor.Size = new System.Drawing.Size(41, 41);
             this.btnFavor.TabIndex = 23;
@@ -117,54 +136,55 @@ namespace EBook
             // 
             // cbBookmark
             // 
-            this.cbBookmark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbBookmark.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.cbBookmark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBookmark.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBookmark.ForeColor = System.Drawing.Color.White;
             this.cbBookmark.FormattingEnabled = true;
-            this.cbBookmark.Location = new System.Drawing.Point(196, 7);
+            this.cbBookmark.Location = new System.Drawing.Point(220, 5);
             this.cbBookmark.Name = "cbBookmark";
-            this.cbBookmark.Size = new System.Drawing.Size(186, 21);
+            this.cbBookmark.Size = new System.Drawing.Size(152, 26);
             this.cbBookmark.TabIndex = 22;
-            this.cbBookmark.Text = "Danh sách chỉ mục";
+            this.cbBookmark.Text = "Bookmark";
             this.cbBookmark.SelectedIndexChanged += new System.EventHandler(this.cbBookmark_SelectedIndexChanged);
             // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(118, 0);
+            this.button2.Image = global::EBook.Properties.Resources.icbaccolor1;
+            this.button2.Location = new System.Drawing.Point(85, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 35);
+            this.button2.Size = new System.Drawing.Size(35, 35);
             this.button2.TabIndex = 14;
-            this.button2.Text = "Màu nền";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(40, 0);
+            this.button1.Image = global::EBook.Properties.Resources.ictextcolor1;
+            this.button1.Location = new System.Drawing.Point(42, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 35);
+            this.button1.Size = new System.Drawing.Size(35, 35);
             this.button1.TabIndex = 13;
-            this.button1.Text = "Màu chữ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnHome
             // 
             this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Image = global::EBook.Properties.Resources.homebtn1;
             this.btnHome.Location = new System.Drawing.Point(-1, 0);
@@ -178,7 +198,7 @@ namespace EBook
             this.panel12.Controls.Add(this.btnZoomIn);
             this.panel12.Controls.Add(this.btnZoomOut);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(556, 0);
+            this.panel12.Location = new System.Drawing.Point(588, 0);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(102, 35);
             this.panel12.TabIndex = 10;
@@ -186,8 +206,8 @@ namespace EBook
             // btnZoomIn
             // 
             this.btnZoomIn.FlatAppearance.BorderSize = 0;
-            this.btnZoomIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnZoomIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnZoomIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnZoomIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
             this.btnZoomIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZoomIn.Image = global::EBook.Properties.Resources.addbtn;
             this.btnZoomIn.Location = new System.Drawing.Point(58, 0);
@@ -200,8 +220,8 @@ namespace EBook
             // btnZoomOut
             // 
             this.btnZoomOut.FlatAppearance.BorderSize = 0;
-            this.btnZoomOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnZoomOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnZoomOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnZoomOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
             this.btnZoomOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZoomOut.Image = global::EBook.Properties.Resources.subbtn;
             this.btnZoomOut.Location = new System.Drawing.Point(3, 0);
@@ -216,36 +236,28 @@ namespace EBook
             this.panel6.Controls.Add(this.tbSearch);
             this.panel6.Controls.Add(this.btnSearch);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(658, 0);
+            this.panel6.Location = new System.Drawing.Point(690, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(271, 35);
+            this.panel6.Size = new System.Drawing.Size(239, 35);
             this.panel6.TabIndex = 16;
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.BackColor = System.Drawing.SystemColors.Control;
-            this.tbSearch.Location = new System.Drawing.Point(3, 8);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(219, 20);
-            this.tbSearch.TabIndex = 0;
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
             this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = global::EBook.Properties.Resources.ic_search1;
-            this.btnSearch.Location = new System.Drawing.Point(228, 3);
+            this.btnSearch.Location = new System.Drawing.Point(200, 0);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(37, 29);
+            this.btnSearch.Size = new System.Drawing.Size(38, 35);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.DimGray;
+            this.panel7.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel5);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -256,7 +268,7 @@ namespace EBook
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.DimGray;
+            this.panel9.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.panel9.Controls.Add(this.btnPrev);
             this.panel9.Controls.Add(this.btnFirst);
             this.panel9.Controls.Add(this.btnLast);
@@ -272,8 +284,8 @@ namespace EBook
             // btnPrev
             // 
             this.btnPrev.FlatAppearance.BorderSize = 0;
-            this.btnPrev.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnPrev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnPrev.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnPrev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev.ForeColor = System.Drawing.Color.White;
@@ -288,8 +300,8 @@ namespace EBook
             // btnFirst
             // 
             this.btnFirst.FlatAppearance.BorderSize = 0;
-            this.btnFirst.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnFirst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnFirst.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnFirst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFirst.ForeColor = System.Drawing.Color.White;
@@ -304,14 +316,14 @@ namespace EBook
             // btnLast
             // 
             this.btnLast.FlatAppearance.BorderSize = 0;
-            this.btnLast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnLast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLast.ForeColor = System.Drawing.Color.White;
             this.btnLast.Location = new System.Drawing.Point(284, 1);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(51, 41);
+            this.btnLast.Size = new System.Drawing.Size(53, 41);
             this.btnLast.TabIndex = 25;
             this.btnLast.Text = ">>";
             this.btnLast.UseVisualStyleBackColor = true;
@@ -320,8 +332,8 @@ namespace EBook
             // btnNext
             // 
             this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
@@ -335,15 +347,15 @@ namespace EBook
             // 
             // rtbCurentPage
             // 
-            this.rtbCurentPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rtbCurentPage.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.rtbCurentPage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbCurentPage.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbCurentPage.ForeColor = System.Drawing.Color.White;
-            this.rtbCurentPage.Location = new System.Drawing.Point(125, 12);
+            this.rtbCurentPage.Location = new System.Drawing.Point(123, 12);
             this.rtbCurentPage.Multiline = false;
             this.rtbCurentPage.Name = "rtbCurentPage";
             this.rtbCurentPage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.rtbCurentPage.Size = new System.Drawing.Size(36, 19);
+            this.rtbCurentPage.Size = new System.Drawing.Size(39, 19);
             this.rtbCurentPage.TabIndex = 2;
             this.rtbCurentPage.Text = "22";
             this.rtbCurentPage.WordWrap = false;
@@ -363,7 +375,7 @@ namespace EBook
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.DimGray;
+            this.panel5.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.panel5.Controls.Add(this.cbChapter);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
@@ -373,17 +385,19 @@ namespace EBook
             // 
             // cbChapter
             // 
-            this.cbChapter.BackColor = System.Drawing.Color.DimGray;
+            this.cbChapter.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.cbChapter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChapter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbChapter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbChapter.ForeColor = System.Drawing.Color.White;
             this.cbChapter.FormattingEnabled = true;
-            this.cbChapter.Location = new System.Drawing.Point(11, 11);
+            this.cbChapter.Location = new System.Drawing.Point(4, 8);
             this.cbChapter.Name = "cbChapter";
-            this.cbChapter.Size = new System.Drawing.Size(252, 21);
+            this.cbChapter.Size = new System.Drawing.Size(227, 26);
             this.cbChapter.TabIndex = 21;
-            this.cbChapter.MouseClick += new MouseEventHandler(this.cbChapter_onMouseClick);
+            this.cbChapter.SelectedIndexChanged += new System.EventHandler(this.cbChapter_SelectedIndexChanged_1);
             this.cbChapter.SelectionChangeCommitted += new System.EventHandler(this.cbChapter_SelectedIndexChanged);
+            this.cbChapter.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbChapter_onMouseClick);
             // 
             // panel8
             // 
@@ -393,6 +407,21 @@ namespace EBook
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(929, 491);
             this.panel8.TabIndex = 16;
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.tbSearch.Location = new System.Drawing.Point(17, 9);
+            this.tbSearch.Multiline = false;
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.tbSearch.Size = new System.Drawing.Size(170, 20);
+            this.tbSearch.TabIndex = 7;
+            this.tbSearch.Text = "";
+            this.tbSearch.WordWrap = false;
             // 
             // FormRead
             // 
@@ -404,6 +433,7 @@ namespace EBook
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel10);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRead";
             this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -413,7 +443,6 @@ namespace EBook
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -429,7 +458,6 @@ namespace EBook
         private Panel panel7;
         private Panel panel8;
         private Panel panel6;
-        private TextBox tbSearch;
         private Button btnSearch;
         private Panel panel5;
         private Panel panel9;
@@ -449,5 +477,7 @@ namespace EBook
         private ComboBox cbBookmark;
         private ComboBox cbChapter;
         private Button btnFavor;
+        private Button button3;
+        private RichTextBox tbSearch;
     }
 }

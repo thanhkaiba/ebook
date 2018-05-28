@@ -71,7 +71,7 @@ namespace EBook
                 }
 
                 cnn.Close();
-            } catch (Exception ex)
+            } catch (Exception)
             {
                 MessageBox.Show("Can't load novel's content! ");
             }
@@ -311,13 +311,13 @@ namespace EBook
         private void btnZoomOut_Click(object sender, EventArgs e)
         {
             Font currentFont = Content.Font;
-            Content.Font = new System.Drawing.Font("Microsoft Sans Serif", currentFont.Size - 1, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Content.Font = new System.Drawing.Font(Content.Font.FontFamily, currentFont.Size - 1, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         }
 
         private void btnZoomIn_Click(object sender, EventArgs e)
         {
             Font currentFont = Content.Font;
-            Content.Font = new System.Drawing.Font("Microsoft Sans Serif", currentFont.Size + 1, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Content.Font = new System.Drawing.Font(Content.Font.FontFamily, currentFont.Size + 1, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -338,16 +338,63 @@ namespace EBook
         private void btnFavor_Click(object sender, EventArgs e)
         {
             favor = !favor;
-            if (!favor)
+            Page page = novel.chapters[currentChapter].pages[currentPageIndex];
+            if (favor)
             {
-                btnFavor.Image = global::EBook.Properties.Resources.starborder;
-                
+                FormAddBookmark form = new FormAddBookmark("Trang " + page.pageNumber);
+                form.ShowDialog();
+                if (form.getResult() == FormAddBookmark.RESULT_OK)
+                {
+                    string bookmarkName = form.getBookmarkName();
+                    btnFavor.Image = global::EBook.Properties.Resources.star;
+                  
+                    string connetionString = "Data Source=DESKTOP-DAUSDI2\\SQLEXPRESS;Initial Catalog=kimdungnovel;Integrated Security=True;MultipleActiveResultSets=true";
+                    SqlConnection cnn = new SqlConnection(connetionString);
+                    try
+                    {
+                        cnn.Open();
+                        SqlCommand command = new SqlCommand("UPDATE page SET bookmark = '1', name = N'" + bookmarkName + "' WHERE id = " + page.id, cnn);
+                        command.ExecuteNonQuery();
+                        page.name = bookmarkName;
+                        page.bookmark = true;
+                        bookmarks.Add(page);
+                        cnn.Close();
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+
+                }
+               
             }
             else
             {
-                btnFavor.Image = global::EBook.Properties.Resources.star;
-                
+
+                btnFavor.Image = global::EBook.Properties.Resources.starborder;
+                bookmarks.Remove(page);
+                string connetionString = "Data Source=DESKTOP-DAUSDI2\\SQLEXPRESS;Initial Catalog=kimdungnovel;Integrated Security=True;MultipleActiveResultSets=true";
+                SqlConnection cnn = new SqlConnection(connetionString);
+                try
+                {
+                    cnn.Open();
+                    SqlCommand command = new SqlCommand("UPDATE page SET bookmark = '0', name = NULL WHERE id = " + page.id, cnn);
+                    command.ExecuteNonQuery();
+                    cnn.Close();
+                }
+                catch (Exception)
+                {
+
+                }
+
             }
+            cbBookmark.Items.Clear();
+            
+            foreach (Page bookmark in bookmarks)
+            {
+                this.cbBookmark.Items.Add(bookmark.name);
+            }
+
         }
 
         void rtbCurrentPage_KeyPress(object sender, KeyPressEventArgs e)
@@ -510,6 +557,21 @@ namespace EBook
             currentChapter = this.cbChapter.SelectedIndex;
             currentPageIndex = 0;
             setContent(currentChapter, currentPageIndex);
+        }
+
+        private void cbChapter_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            if (fontDialog.ShowDialog() == DialogResult.OK)
+            {
+                Font currentFont = Content.Font;
+                Content.Font = new System.Drawing.Font(fontDialog.Font.FontFamily, currentFont.Size, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
         }
     }
 }
