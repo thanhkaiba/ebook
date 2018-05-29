@@ -65,7 +65,7 @@ namespace EBook
                                 page.pageNumber = pageNumber++;
                                 page.bookmark = (subReader.GetInt32(3) == 1);
                                 page.startIndex = startIndex;
-                                page.endIndex = startIndex + page.content.Length;
+                                page.endIndex = startIndex + page.content.Length - 1;
                                 startIndex = page.endIndex + 1;
 
                                 if (page.bookmark)
@@ -568,6 +568,10 @@ namespace EBook
             if (textChanged)
             {
                 keys = tbSearch.Text.Trim().Split(' ');
+                for (int i = 0; i < keys.Length; i++)
+                {
+                    keys[i] = Regex.Escape(keys[i]);
+                }
                 string pattern = "(";
                 for (int i = 0; i < keys.Length; i++)
                 {
@@ -576,12 +580,14 @@ namespace EBook
                         pattern += "|";
                 }
                 pattern += ")+";
+                string text = novelContent.ToString();
+                int k = text.Length;
                 matches = Regex.Matches(novelContent.ToString(), pattern);
                 Order();
                 textChanged = false;
             }
 
-            if (index < resultsIndex.Length - 1)
+            if (resultsIndex != null && index < resultsIndex.Length - 1)
             {
                 for (int i = 0; i < novel.chapters.Count; i++)
                 {
@@ -607,6 +613,7 @@ namespace EBook
         {
             index = 0;
             textChanged = true;
+            resultsIndex = null;
             matches = null;
         }
 
